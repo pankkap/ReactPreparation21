@@ -7,15 +7,23 @@
     <title>Promise</title>
   </head>
   <body>
+    <h1>JavaScript Promises</h1>
+
     <script>
-      // without then and catch
+      //  with Pending state
       function prom(complete) {
         return new Promise((resolve, reject) => {
-          if (complete) {
-            resolve("I am successful");
-          } else {
-            reject("I am failed");
-          }
+          // This is Pending state
+          console.log("Please wait, i am loading data");
+
+          // Adding wait for 2min
+          setTimeout(() => {
+            if (complete) {
+              resolve("I am successful");
+            } else {
+              reject("I am failed");
+            }
+          }, 2000);
         });
       }
 
@@ -27,8 +35,7 @@
         console.log(error);
       };
 
-      prom(true).then(ok);
-      prom(true).catch(notOk);
+      prom(true).then(ok).catch(notOk);
     </script>
   </body>
 </html>
