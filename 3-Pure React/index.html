@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure React</title>
+             
+    <!-- React Library & React DOM -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+        
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+     
+    <div id="react-container"></div>
+
+    <script>
+      // 1. React Element
+
+      // var element = React.createElement("h1", null, "React JS Training");
+      // ReactDOM.render(element, document.getElementById("react-container"));
+
+      // 2. React Element's Children
+
+      // var traininglistElement = React.createElement(
+      //   "ul",
+      //   null,
+      //   React.createElement("li", null, "React JS"),
+      //   React.createElement("li", null, "Node JS"),
+      //   React.createElement("li", null, "Angular"),
+      //   React.createElement("li", null, "Express JS"),
+      //   React.createElement("li", null, "Vue JS")
+      // );
+      // ReactDOM.render(
+      //   traininglistElement,
+      //   document.getElementById("react-container")
+      // );
+
+      // 3. Constructing Elements with Data
+      var trainingCourse = ["React JS", "Angular", "Mobile", "Node", "Express"];
+      var trainineCourseElement = React.createElement(
+        "ul",
+        null,
+        trainingCourse.map((course, i) =>
+          React.createElement("li", { key: i }, course)
+        )
+      );
+      ReactDOM.render(
+        trainineCourseElement,
+        document.getElementById("react-container")
+      );
+    </script>
+  </body>
+</html>

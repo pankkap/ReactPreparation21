@@ -8,3 +8,9 @@ export const decrement = () => {
     type: "DECREMENT",
   };
 };
+export const logging = () => {
+  return {
+    type: "SIGN_IN",
+  };
+};
+
