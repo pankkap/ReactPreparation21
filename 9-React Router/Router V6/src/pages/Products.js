@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // Please note:
 // <Link to="/products/p1" ... could also be written as
@@ -8,15 +8,15 @@ const Products = () => {
   return (
     <section>
       <h1>The Products Page</h1>
-      <ul>
+      <ul style={{ listStyle: "none" }}>
         <li>
-          <Link to='/products/p1'>A Book</Link>
+          <Link to="p1">A Book</Link>
         </li>
         <li>
-          <Link to='/products/p2'>A Carpet</Link>
+          <Link to="/products/p2">A Carpet</Link>
         </li>
         <li>
-          <Link to='/products/p3'>An Online Course</Link>
+          <Link to="/products/p3">An Online Course</Link>
         </li>
       </ul>
     </section>
@@ -24,3 +24,8 @@ const Products = () => {
 };
 
 export default Products;
+
+
+
+
+
