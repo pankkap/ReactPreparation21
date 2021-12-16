@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromiseAsSolution of CallBackHell</title>
+  </head>
+  <body>
+    <h1>PromiseAsSolution of Callback Hell</h1>
+    <script>
+      console.log("Start");
+
+      // 1. Remove callback in function arguments
+      // 2. create promise as return
+      // 3. Put setTimeout inside Promise callback
+      // 4. Rename callback with resolve keyword
+
+      function getName(name) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Inside Name TimeOut");
+            console.log(name);
+            resolve(name);
+          }, 2000);
+        });
+      }
+
+      // 1. Remove callback in function arguments
+      // 2. create promise as return
+      // 3. Put setTimeout inside Promise callback
+      // 4. rename callback with resolve keyword
+
+      function getHobbies(name) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Inside Hobbies TimeOut");
+            resolve(["Cricket", "Dancing", "Reading"]);
+          }, 2000);
+        });
+      }
+
+      // let nm = getName("Pankaj", (nm) => {
+      //   console.log(nm);
+      //   getHobbies(nm, (hobby) => {
+      //     console.log(hobby);
+      //   });
+      // });
+
+      getName("pankaj")
+        .then((nm) => getHobbies(nm))
+        .then((hobby) => console.log(hobby));
+
+      console.log("End");
+
+    </script>
+  </body>
+</html>

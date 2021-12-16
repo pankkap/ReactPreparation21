@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromiseExp-2</title>
+  </head>
+  <body>
+    <h1>PromiseExp-2</h1>
+    <h2>Promise Chaining</h2>
+    <script>
+      // Promise chaning
+      const promiseObj = new Promise((resolve, reject) => {
+        let num = 10;
+        resolve(num);
+      })
+        .then((value) => {
+          console.log(value);
+          return value + 10;
+          // return again return one more pormise
+        })
+        .then((value) => {
+          console.log(value);
+          return value + 10;
+          // return again return one more pormise
+        })
+        .then((value) => {
+          console.log(value);
+        });
+    </script>
+  </body>
+</html>

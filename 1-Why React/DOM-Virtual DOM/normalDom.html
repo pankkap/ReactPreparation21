@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal Dom</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li id="last">Item 5</li>
+      </ul>
+      <button onclick="updateItem()">Update Item</button>
+    </div>
+    <script>
+      function updateItem() {
+        var x = document.getElementById("last");
+        x.innerHTML = "Item 6";
+      }
+    </script>
+  </body>
+</html>

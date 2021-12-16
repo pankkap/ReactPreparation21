@@ -1,13 +1,9 @@
-import Counter from "./Component/ClickCounter";
-import './App.css'
-import HoverCounter from "./Component/HoverCounter";
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Counter />
-      <HoverCounter />
-    </div>
+    <>
+      <h1>This is Our Root Component</h1>
+    </>
   );
-}
+};
 
 export default App;
