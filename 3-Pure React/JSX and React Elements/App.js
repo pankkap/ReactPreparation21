@@ -19,7 +19,7 @@ const cssStyle = {
 };
 
 const name = "Beta-Labs";
-const i = false;
+const i = true;
 const logo =
   "https://2.bp.blogspot.com/-CzH30hf-cXg/X9sdRn_6eMI/AAAAAAAACJU/aFcU5FprQMgOnZ6Bz_yzyV8aB_Gm8y7dgCK4BGAYYCw/s1600/Blog%2BBanner%2B1080x210.jpg";
 

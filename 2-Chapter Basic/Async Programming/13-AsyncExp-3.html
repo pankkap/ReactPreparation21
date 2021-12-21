@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async-Await Example</title>
+  </head>
+  <body>
+    <h1>Async-Await Example-3</h1>
+    <!-- <img
+      id="img_url"
+      src="https://www.koenig-solutions.com/img/logo.png"
+      alt=""
+    /> -->
+
+    <script>
+      async function getUser() {
+        const response = await fetch("https://api.github.com/users/octocat");
+        console.log(response);
+        const data = await response.json();
+        console.log(data);
+
+        // console.log(data.avatar_url);
+        // document.getElementById("img_url").src = data.avatar_url;
+      }
+      getUser();
+    </script>
+  </body>
+</html>
